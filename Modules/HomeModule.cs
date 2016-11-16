@@ -14,7 +14,7 @@ namespace Places
         return View["view_all_places.cshtml", allPlaces];
       };
       Post["/place_added"] = _ => {
-        Place newPlace = new Place (Request.Form["new-city"]);
+        Place newPlace = new Place (Request.Form["new-city"], Request.Form["new-photo"], Request.Form["new-Description"]);
         newPlace.Save();
         return View["place_added.cshtml", newPlace];
       };

@@ -3,6 +3,8 @@
   @foreach(var place in Model)
   {
     <li>@place.GetCity()</li>
+    <li><img src="@place.GetPhoto()"></img></li>
+    <li>@place.GetDescription()</li>
   }
 </ul>
 <p><a href="/">Add another place here!</a></p>
